@@ -22,4 +22,28 @@ utility.preZero = function (num, length){
 }
 
 
+utility.downloadData = function (data){
+ /*
+  // data is a csv format text 
+  // run this function it would be download a csv file
+  // with the data's value
+  // , could be replaced by ;
+  data = 
+   '"row1col1",\n'
+   +'"row2col1","row2col2",\n'
+   +'"row3col1", "row3col2", "row3col3",\n'
+   ...
+ */
+    data = encodeURIComponent(data);
+ 
+    var dateStr = new Date().toJSON();
+
+    var a = document.createElement('a');
+    a.download = dateStr+'.csv';
+    a.href = "data:text/csv;charset=utf-8,"+data;
+    document.body.append(a);
+    a.click();
+    a.remove();
+}
+
 module.exports = utility;
