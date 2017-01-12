@@ -1,6 +1,6 @@
 var utility = {};
 
- /* 
+ /* 2017.01.11
   userage:
   date format like '2017-01-01 09:00:00'
   d = new Date();
@@ -21,7 +21,7 @@ utility.preZero = function (num, length){
     return str + num;
 }
 
-
+// 2017.01.12
 utility.downloadData = function (data){
  /*
   // data is a csv format text 
