@@ -2,7 +2,7 @@ var utility = {};
 
  /* 2017.01.11
   userage:
-  date format like '2017-01-01 09:00:00'
+  date format string like '2017-01-01 09:00:00' (new Date().toLocaleString())
   d = new Date();
   var year = d.getFullYear();
   var month = utility.preZero(d.getMonth()+1);
